@@ -1,0 +1,2 @@
+package done;
+import java.io.*;class TRICOUNT{public static void main(String[]l){S s=new S();long t=s.i(),c=0;while(c<t){Long n=s.i(),m=n*(n+2)*(2*n+1);if(n%2==1)m-=1;m/=8;System.out.println(m);c++;}}static class S{InputStream d=new DataInputStream(System.in);int p,q,B=1<<17;byte[]b=new byte[B];long i(){int z=0;byte c=r();while (c<=' ')c=r();do{z=z*10+c-'0';c=r();}while(c>' ');return z;}void f(){try{q=d.read(b,p=0,B);}catch(Exception e){}if(q==-1)b[0]=-1;}byte r(){if(p==q)f();return b[p++];}}};
