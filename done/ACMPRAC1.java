@@ -35,7 +35,6 @@ public class ACMPRAC1 {
         buffer = new byte[BUFFER_SIZE];
         bufferPointer = bytesRead = 0;
         }
-        public char nextChar() {byte c = read();while (c <= ' ')c = read();return (char) c;}
         public int nextInt() {int ret = 0;byte c = read();while (c <= ' ')c = read();boolean neg = c == '-';if (neg)c=read();do{ret=ret*10+c-'0';c = read();} while (c>' ');if(neg)return -ret;return ret;}
         private void fillBuffer(){try{bytesRead=din.read(buffer,bufferPointer=0,BUFFER_SIZE);}catch(Exception e) {}if(bytesRead==-1)buffer[0]=-1;}
         private byte read(){if(bufferPointer == bytesRead)fillBuffer();return buffer[bufferPointer++];}}

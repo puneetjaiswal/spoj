@@ -1,7 +1,6 @@
 package done;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
 import java.util.InputMismatchException;
 
 public class MINMOVE {
