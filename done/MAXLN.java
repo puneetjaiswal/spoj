@@ -2,29 +2,14 @@ package done;
 import java.io.DataInputStream;
 import java.io.InputStream;
 
-public class ACMPRAC1 {
-
-    public static void main(String[] args) {
+public class MAXLN {
+    public static void main(String [] args) {
         StdIn s = new StdIn(System.in);
-        int T = s.nextInt();
-        int count = 0;
-        while (count < T) {
-            int N = s.nextInt();
-            int lastX = 0;
-            int lastY = 0;
-            double maxVal = 0;
-            for (int i = 0; i < N; i++) {
-                int x = s.nextInt();
-                int y = s.nextInt();
-                double log = y * Math.log10(x);
-                if (log > maxVal) {
-                    maxVal = log;
-                    lastX = x;
-                    lastY = y;
-                }
-            }
-            System.out.println(lastX + " " + lastY);
-            count++;
+        int T=s.nextInt();
+        int count=0;
+        while(T-->0) {
+            long n = s.nextInt();
+            System.out.println("Case "+(++count)+": "+((long)4*n*n)+".25");
         }
     }
 
@@ -40,5 +25,6 @@ public class ACMPRAC1 {
         }
         public int nextInt() {int ret = 0;byte c = read();while (c <= ' ')c = read();boolean neg = c == '-';if (neg)c=read();do{ret=ret*10+c-'0';c = read();} while (c>' ');if(neg)return -ret;return ret;}
         private void fillBuffer(){try{bytesRead=din.read(buffer,bufferPointer=0,BUFFER_SIZE);}catch(Exception e) {}if(bytesRead==-1)buffer[0]=-1;}
-        private byte read(){if(bufferPointer == bytesRead)fillBuffer();return buffer[bufferPointer++];}}
+        private byte read(){if(bufferPointer == bytesRead)fillBuffer();return buffer[bufferPointer++];}
+    }
 }
